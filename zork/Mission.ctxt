@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=p
+comment0.target=Mission(java.util.List)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Mission\r\n\ @requires\ p\ \!\=\ null;\r\n\ @ensures\ getvisite()\ \=\=\ 0;\r\n\ @ensures\ poidsdevictoire()\ \=\=\ 0;\r\n
+comment1.params=
+comment1.target=void\ mission()
+comment1.text=\r\n\ d\u00E9termination\ de\ la\ mission\ elle\ consite\ \u00E0\ choisir\ au\ hasard\ un\ nombre\ de\ pi\u00E8ce,\ dont\ la\ sommes\ du\ poids\ des\ objets\ transportables\ sera\ le\ poids\ \r\n\ max\ autoris\u00E9.\ alors\ le\ joueur\ doit\ transport\u00E9\ des\ objets\ de\ tel\ sorte\ que\ le\ poids\ total\ des\ objets\ transport\u00E9\ soit\ \u00E9gale\ a\ celui\ fournit\ par\ la\ mission.\r\n\ @ensures\ getvisite()\ >\ 0;\r\n\ @ensures\ poidsdevictoire()\ >\ 0;\r\n
+comment2.params=
+comment2.target=int\ getpoidsdevictoire()
+comment2.text=\r\n\ renvoie\ le\ poidsdevictoire\r\n\ @return\ renvoie\ le\ poids\ max\ a\ atteindre\ par\ le\ joueur\r\n\ @ensures\ poidsdevictoire()\ >\ 0;\r\n
+comment3.params=
+comment3.target=int\ getvisite()
+comment3.text=\r\n\ renvoie\ le\ nombre\ de\ pi\u00E8ce\ a\ visit\u00E9\r\n\ @return\ renvoie\ le\ nombre\ de\ pi\u00E8ce\ au\ moins\ a\ visit\u00E9\ par\ le\ joueur\ \r\n\ @ensures\ getvisite()\ >\ 0;\r\n
+comment4.params=
+comment4.target=void\ affichage()
+comment4.text=\r\n\ affichage\ de\ la\ mission\r\n
+comment5.params=d\ f\ r
+comment5.target=int\ aleatoire(int,\ int,\ java.util.Random)
+comment5.text=\r\n\ gen\u00E8re\ un\ nombre\ aleatoire\ entre\ debut\ et\ fin\r\n\ @param\ d\ \ debut\ \r\n\ @param\ f\ \ fin\ \r\n\ @param\ r\ \ c'est\ le\ random\r\n\ @return\ le\ nombre\ compris\ entre\ @param\ d\ et\ @param\ f\r\n
+comment6.params=j
+comment6.target=boolean\ gagner(joueur)
+comment6.text=\r\n\ V\u00E9rifie\ si\ le\ joueur\ a\ gagn\u00E9\r\n\ @param\ j\ c'est\ le\ joueur\r\n\ \r\n
+comment7.params=
+comment7.target=void\ plan()
+comment7.text=\r\n\ affichage\ du\ plan\ \r\n
+numComments=8

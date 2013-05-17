@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=nom\ p\ et
+comment0.target=Objectpiece(java.lang.String,\ int,\ boolean)
+comment0.text=\r\n\ constructeur\ de\ la\ classe\ Objectpiece\ qui\ prend\ en\ argument\ le\ nom\ de\ l'objet,\ son\ poids\ ,\ et\ son\ etat\r\n\ @param\ nom\ le\ nom\ de\ l'objet\r\n\ @param\ p\ \ \ le\ poids\ de\ l'objet\r\n\ @param\ et\ \ l'etat\ de\ l'objet\ true\ ou\ false\r\n
+comment1.params=
+comment1.target=java.lang.String\ getnomobjet()
+comment1.text=\r\n\ la\ methode\ getnomobjet\ renvoie\ le\ nom\ de\ l'objet\ .\r\n\ @return\ le\ nom\ de\ l'objet\r\n
+comment2.params=
+comment2.target=int\ getpoids()
+comment2.text=\r\n\ la\ m\u00E9thode\ getpoids\ renvioe\ le\ poids\ de\ l'objet.\r\n\ @return\ le\ poids\ de\ l'objet\r\n
+comment3.params=
+comment3.target=boolean\ getetat()
+comment3.text=\r\n\ la\ m\u00E9thode\ getetat\ renvoie\ l'etat\ de\ l'objet\ true\ pour\ emportable\ et\ false\ pour\ non\ emportable\r\n\ @return\ true\ pour\ emportable\ et\ false\ pour\ non\ emportable\r\n
+comment4.params=obj
+comment4.target=boolean\ equals(java.lang.Object)
+comment4.text=\r\n\ compare\ deux\ objet\ zork\r\n\ @param\ obj\ c'est\ le\ nom\ de\ l'objets\ a\ compar\u00E9\ avec\ l'objet\ courant\r\n
+numComments=5

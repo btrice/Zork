@@ -1,0 +1,47 @@
+#BlueJ class context
+comment0.params=nom
+comment0.target=joueur(java.lang.String)
+comment0.text=\r\n\ @requires\ nom\ \!\=\ null;\r\n\ @ensure\ getscore()\ \=\=\ 0;\r\n\ @ensure\ \ nombreobjet()\ \=\=\ 0;\r\n\ @ensure\ \ getpoids()\ \=\=0;\r\n
+comment1.params=
+comment1.target=java.lang.String\ getnom()
+comment1.text=\r\n\ renvoie\ le\ nom\ du\ joueur\r\n
+comment10.params=nom
+comment10.target=Objectpiece\ deposer(java.lang.String)
+comment10.text=\r\n\ deposer\ un\ objet\ emporter\ mais\ renvoie\ l'objet\ pour\ le\ deposer\ dans\ la\ pi\u00E8ce\ courante\r\n\ @param\ nom\ c'est\ le\ nom\ de\ l'objet\r\n
+comment11.params=
+comment11.target=void\ affichagedesobjets()
+comment11.text=\r\n\ affichage\ des\ objets\ tranporter\ par\ le\ joueur\r\n
+comment12.params=j
+comment12.target=void\ informations(joueur)
+comment12.text=\r\n\ informations\ sur\ le\ joueur\r\n
+comment13.params=
+comment13.target=int\ nombreobjet()
+comment13.text=\r\n\ renvoie\ le\ nombre\ d'objet\ transporter\ par\ le\ joueur\r\n\ @return\ le\ nombre\ d'objet\ transport\u00E9\ par\ le\ joueur\r\n
+comment14.params=nom
+comment14.target=boolean\ esttransporte(java.lang.String)
+comment14.text=\r\n\ renvoie\ true\ si\ le\ joueur\ transporte\ l'objet\ dont\ le\ nom\ est\ donn\u00E9e\ en\ argument\r\n
+comment2.params=p
+comment2.target=void\ setpoidsmax(int)
+comment2.text=\r\n\ initialisation\ du\ poidsmax\r\n\ @param\ p\ c'est\ le\ poids\ max\ \u00E0\ ne\ pas\ depass\u00E9\r\n
+comment3.params=
+comment3.target=int\ getscore()
+comment3.text=\r\n\ renvoie\ le\ score\ du\ joueur\r\n\ @return\ renvoie\ le\ score\ du\ joueur\r\n
+comment4.params=
+comment4.target=void\ setscore()
+comment4.text=\r\n\ incr\u00E9mente\ le\ score\ de\ plus\ 10\ \r\n\ \r\n
+comment5.params=
+comment5.target=void\ setnbpiecevisite()
+comment5.text=\r\n\ incr\u00E9mente\ le\ nombre\ piece\ visit\u00E9\ de\ plus\ 1\r\n
+comment6.params=
+comment6.target=int\ getnbpiecevisite()
+comment6.text=\r\n\ renvoie\ le\ nombre\ de\ piece\ visit\u00E9\r\n\ @return\ \ renvoie\ le\ nombre\ de\ pi\u00E8ce\ visit\u00E9\ par\ le\ joueur.\r\n
+comment7.params=
+comment7.target=int\ getpoids()
+comment7.text=\r\n\ renvoie\ le\ poids\ total\ des\ objets\ transport\u00E9s\r\n\ @return\ renvoie\ le\ poids\ total\ des\ objets\ transport\u00E9s\ par\ le\ joueurs.\r\n
+comment8.params=
+comment8.target=int\ getpoidsmax()
+comment8.text=\r\n\ renvoie\ le\ poids\ max\ fix\u00E9\r\n\ @return\ renvoie\ le\ poids\ max\ .\r\n
+comment9.params=obj
+comment9.target=boolean\ transporter(Objectpiece)
+comment9.text=\r\n\ Permet\ au\ joueur\ de\ transporter\ un\ objet\r\n\ @return\ true\ si\ l'objet\ a\ \u00E9t\u00E9\ transport\u00E9\ false\ sinon.\r\n\ @requires\ obj\ \!\=\ null;\r\n\ @requires\ obj.esttransporte(obj.getnom());\r\n\ @ensures\ \=\=\ \\all(nombreobjet())\ +\ 1;\r\n
+numComments=15

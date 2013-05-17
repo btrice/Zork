@@ -1,0 +1,55 @@
+Class documentation
+<---- javadoc command: ---->
+C:\Program Files (x86)\Java\jdk1.6.0_07\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.6
+-classpath
+C:\Program Files (x86)\BlueJ\lib\bluejcore.jar;C:\Program Files (x86)\BlueJ\lib\junit-4.8.2.jar;H:\portofolio\portofolio\zork
+-d
+H:\portofolio\portofolio\zork\doc
+-encoding
+windows-1252
+-charset
+windows-1252
+-docletpath
+C:\Program Files (x86)\BlueJ\lib\bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+H:\portofolio\portofolio\zork\joueur.java
+<---- end of javadoc command ---->
+Loading source file H:\portofolio\portofolio\zork\joueur.java...
+Constructing Javadoc information...
+Standard Doclet version 1.6.0_07
+Building tree for all the packages and classes...
+Generating H:\portofolio\portofolio\zork\doc\joueur.html...
+H:\portofolio\portofolio\zork\joueur.java:29: warning - @invariant is an unknown tag.
+H:\portofolio\portofolio\zork\joueur.java:29: warning - @invariant is an unknown tag.
+H:\portofolio\portofolio\zork\joueur.java:29: warning - @invariant is an unknown tag.
+H:\portofolio\portofolio\zork\joueur.java:29: warning - @invariant is an unknown tag.
+H:\portofolio\portofolio\zork\joueur.java:29: warning - @invariant is an unknown tag.
+H:\portofolio\portofolio\zork\joueur.java:29: warning - @invariant is an unknown tag.
+H:\portofolio\portofolio\zork\joueur.java:43: warning - @requires is an unknown tag.
+H:\portofolio\portofolio\zork\joueur.java:43: warning - @ensure is an unknown tag.
+H:\portofolio\portofolio\zork\joueur.java:43: warning - @ensure is an unknown tag.
+H:\portofolio\portofolio\zork\joueur.java:43: warning - @ensure is an unknown tag.
+H:\portofolio\portofolio\zork\joueur.java:118: warning - @requires is an unknown tag.
+H:\portofolio\portofolio\zork\joueur.java:118: warning - @requires is an unknown tag.
+H:\portofolio\portofolio\zork\joueur.java:118: warning - @ensures is an unknown tag.
+Generating H:\portofolio\portofolio\zork\doc\package-frame.html...
+Generating H:\portofolio\portofolio\zork\doc\package-summary.html...
+Generating H:\portofolio\portofolio\zork\doc\constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating H:\portofolio\portofolio\zork\doc\allclasses-frame.html...
+Generating H:\portofolio\portofolio\zork\doc\allclasses-noframe.html...
+Generating H:\portofolio\portofolio\zork\doc\index.html...
+Generating H:\portofolio\portofolio\zork\doc\stylesheet.css...
+13 warnings

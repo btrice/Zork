@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=MotCleCommande()
+comment0.text=\r\n\ \ Initialise\ la\ liste\ des\ mots-cl\u00C3\u00A9\ utilisables\ comme\ commande.\r\n
+comment1.params=aString
+comment1.target=boolean\ estCommande(java.lang.String)
+comment1.text=\r\n\ \ Teste\ si\ la\ chaine\ de\ caract\u00C3\u00A8res\ sp\u00C3\u00A9cifi\u00C3\u00A9e\ est\ un\ mot-cl\u00C3\u00A9\ de\ commande\r\n\ \ valide.\ Check\ whether\ a\ given\ String\ is\ a\ valid\ command\ word.\ Return\ true\r\n\ \ if\ it\ is,\ false\ if\ it\ isn't.\r\n\r\n\ @param\ \ aString\ \ Chaine\ de\ caract\u00C3\u00A8res\ a\ tester\r\n\ @return\ \ \ \ \ \ \ \ \ \ true\ si\ le\ param\u00C3\u00A8tre\ est\ une\ commande\ valide,\ false\ sinon\r\n
+comment2.params=
+comment2.target=void\ afficherToutesLesCommandes()
+comment2.text=\r\n\ \ Affiche\ toutes\ les\ commandes\ (i.e.\ les\ mots-cl\u00C3\u00A9)\ valides.\r\n
+numComments=3

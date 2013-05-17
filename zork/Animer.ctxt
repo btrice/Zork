@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=nom
+comment0.target=Animer(java.lang.String)
+comment0.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment1.params=
+comment1.target=java.lang.String\ getNom()
+comment2.params=pc
+comment2.target=Commande\ deplacerAleatoire(Piece)
+comment3.params=pc\ ps
+comment3.target=void\ deplacer(Piece,\ Piece)
+numComments=4

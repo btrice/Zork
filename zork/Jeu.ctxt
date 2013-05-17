@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Jeu()
+comment0.text=\r\n\ \ Cr\u00C3\u00A9e\ le\ jeu\ et\ initialise\ la\ carte\ du\ jeu\ (i.e.\ les\ pi\u00C3\u00A8ces).\r\n
+comment1.params=
+comment1.target=void\ creerPieces()
+comment1.text=\r\n\ \ Cr\u00C3\u00A9e\ toutes\ les\ pieces\ et\ relie\ leurs\ sorties\ les\ unes\ aux\ autres.\r\n
+comment2.params=
+comment2.target=void\ jouer()
+comment2.text=\r\n\ \ Pour\ lancer\ le\ jeu.\ Boucle\ jusqu'a\ la\ fin\ du\ jeu.\r\n
+comment3.params=
+comment3.target=void\ afficherMsgBienvennue()
+comment3.text=\r\n\ \ Affiche\ le\ message\ d'accueil\ pour\ le\ joueur.\r\n
+comment4.params=commande
+comment4.target=boolean\ traiterCommande(Commande)
+comment4.text=\r\n\ \ Ex\u00C3\u00A9cute\ la\ commande\ sp\u00C3\u00A9cifi\u00C3\u00A9e.\ Si\ cette\ commande\ termine\ le\ jeu,\ la\ valeur\r\n\ \ true\ est\ renvoy\u00C3\u00A9e,\ sinon\ false\ est\ renvoy\u00C3\u00A9e\r\n\r\n\ @param\ \ commande\ \ La\ commande\ a\ ex\u00C3\u00A9cuter\r\n\ @return\ \ \ \ \ \ \ \ \ \ \ true\ si\ cette\ commande\ termine\ le\ jeu\ ;\ false\ sinon.\r\n
+comment5.params=
+comment5.target=void\ afficherAide()
+comment5.text=\r\n\ \ Affichage\ de\ l'aide.\ Affiche\ notament\ la\ liste\ des\ commandes\ utilisables.\r\n
+comment6.params=commande
+comment6.target=void\ deplacerVersAutrePiece(Commande)
+comment6.text=\r\n\ \ Tente\ d'aller\ dans\ la\ direction\ sp\u00C3\u00A9cifi\u00C3\u00A9e\ par\ la\ commande.\ Si\ la\ piece\r\n\ \ courante\ poss\u00C3\u00A8de\ une\ sortie\ dans\ cette\ direction,\ la\ piece\ correspondant\ a\r\n\ \ cette\ sortie\ devient\ la\ piece\ courante,\ dans\ les\ autres\ cas\ affiche\ un\r\n\ \ message\ d'erreur.\r\n\r\n\ @param\ \ commande\ \ Commande\ dont\ le\ second\ mot\ sp\u00C3\u00A9cifie\ la\ direction\ a\ suivre\r\n
+comment7.params=commande
+comment7.target=void\ commandejoueur(Commande)
+comment7.text=\r\n\ execute\ les\ commande\ ma,\ mes,\ transporter\ et\ deposer.\r\n\ @param\ commande\ est\ une\ commande\ \u00E0\ executer\ dont\ le\ second\ mot\ sp\u00E9cifie\ objets\ ou\ informations\ si\ la\ commande\ est\ mes\r\n
+numComments=8

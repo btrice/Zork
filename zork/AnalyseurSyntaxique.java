@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /**
- *  
+ *
  *
  *  Cette classe fait partie du logiciel Zork, un jeu d'aventure simple en mode
  *  texte. <p>
@@ -27,75 +27,76 @@ import java.util.StringTokenizer;
 
 public class AnalyseurSyntaxique {
 
-	// répertorie toutes les commandes reconnues
-	private MotCleCommande commandes;
+    // répertorie toutes les commandes reconnues
+    private MotCleCommande commandes;
 
 
-	/**
-	 *  Initialise un nouvel analyseur syntaxique
-	 */
-	public AnalyseurSyntaxique() {
-		commandes = new MotCleCommande();
-	}
+    /**
+     *  Initialise un nouvel analyseur syntaxique
+     */
+    public AnalyseurSyntaxique() {
+        commandes = new MotCleCommande();
+    }
 
 
-	/**
-	 *  Lit une ligne au terminal et tente de l'interpréter comme constituant une
-	 *  commande composée de deux mots. La commande est alors renvoyée sous forme
-	 *  d'une instance de la classe Commande.
-	 *
-	 * @return    La commande utilisateur sous la forme d'un objet Commande
-	 */
-	public Commande getCommande() {
-		// pour mémoriser la ligne entrée par l'utilisateur
-		String ligneEntree = "";
-		String mot1;
-		String mot2;
+    /**
+     *  Lit une ligne au terminal et tente de l'interpréter comme constituant une
+     *  commande composée de deux mots. La commande est alors renvoyée sous forme
+     *  d'une instance de la classe Commande.
+     *
+     * @return    La commande utilisateur sous la forme d'un objet Commande
+     */
+    public Commande getCommande() {
+        // pour mémoriser la ligne entrée par l'utilisateur
+        String ligneEntree = "";
+        String mot1;
+        String mot2;
 
-		// affiche l'invite de commande
-		System.out.print("> ");
+        // affiche l'invite de commande
+        System.out.print("> ");
 
-		BufferedReader reader = new BufferedReader(new InputStreamReader(
-			System.in));
-		try {
-			ligneEntree = reader.readLine();
-		} catch (java.io.IOException exc) {
-			System.out.println("Une erreur est survenue pendant la lecture de votre commande: "
-				 + exc.getMessage());
-		}
+        BufferedReader reader = new BufferedReader(new InputStreamReader(
+                System.in));
+        try {
+            ligneEntree = reader.readLine();
+        } catch (java.io.IOException exc) {
+            System.out.println("Une erreur est survenue pendant la lecture de votre commande: "
+                    + exc.getMessage());
+        }
 
-		StringTokenizer tokenizer = new StringTokenizer(ligneEntree);
+        StringTokenizer tokenizer = new StringTokenizer(ligneEntree);
 
-		if (tokenizer.hasMoreTokens()) {
-			// récupération du permier mot (le mot commande)
-			mot1 = tokenizer.nextToken();
-		} else {
-			mot1 = null;
-		}
-		if (tokenizer.hasMoreTokens()) {
-			// récupération du second mot
-			mot2 = tokenizer.nextToken();
-		} else {
-			mot2 = null;
-		}
+        if (tokenizer.hasMoreTokens()) {
+            // récupération du permier mot (le mot commande)
+            mot1 = tokenizer.nextToken();
+        } else {
+            mot1 = null;
+        }
+        if (tokenizer.hasMoreTokens()) {
+            // récupération du second mot
+            mot2 = tokenizer.nextToken();
+        } else {
+            mot2 = null;
+        }
 
-		// note: le reste de la ligne est ignoré.
+        // note: le reste de la ligne est ignoré.
 
-		// Teste si le permier mot est une commande valide, si ce n'est pas
-		// le cas l'objet renvoyé l'indique
-		if (commandes.estCommande(mot1)) {
-			return new Commande(mot1, mot2);
-		} else {
-			return new Commande(null, mot2);
-		}
-	}
+        // Teste si le permier mot est une commande valide, si ce n'est pas
+        // le cas l'objet renvoyé l'indique
+        if (commandes.estCommande(mot1)) {
+            return new Commande(mot1, mot2);
+        } else {
+            return new Commande(null, mot2);
+        }
+    }
 
 
-	/**
-	 *  Affiche la liste de toutes les commandes reconnues pour le jeu.
-	 */
-	public void afficherToutesLesCommandes() {
-		commandes.afficherToutesLesCommandes();
-	}
+    /**
+     *  Affiche la liste de toutes les commandes reconnues pour le jeu.
+     */
+    public void afficherToutesLesCommandes() {
+        commandes.afficherToutesLesCommandes();
+    }
 }
+
 

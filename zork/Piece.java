@@ -95,4 +95,16 @@ public class Piece extends Stockage<Data>{
         }
         return null;
     }
+   
+    public boolean isTransportable(String nom) {
+        if (!this.isEmpty()) {
+            Iterator it = this.iterator();
+            while (it.hasNext()) {
+                Data data = (Data) it.next();
+                return data.getEtat();
+            }
+        }
+        return false;
+    }
+
 }

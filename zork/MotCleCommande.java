@@ -19,7 +19,7 @@ public class MotCleCommande {
 	 *  Un tableau constant contenant tous les mots-clé valides comme commandes.
 	 */
 	//AIDARA modification ajout de retour et emporter
-	private final static String commandesValides[] = {"aller", "quitter", "aide","retour","transporter","mes","deposer","ma","plan"};
+	private final static String commandesValides[] = {"aller", "quitter", "aide","retour","transporter","mes","déposer","ma","plan"};
 
 
 	/**

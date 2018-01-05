@@ -72,40 +72,40 @@ public class Jeu {
 
         // ajout des ojets dans les pièces
         // salleTD
-        salleTD.add(new MonObjet("tableau",50,false));
-        salleTD.add(new MonObjet("table",50,true));
-        salleTD.add(new MonObjet("bic",5,true));
-        salleTD.add(new MonObjet("crayon",5,true));
-        salleTD.add(new MonObjet("chaisse",25,true));
-        salleTD.add(new Animer("Fille",60,false));
-        salleTD.add(new Animer("Prof",70,false));
+        salleTD.ajouter(new MonObjet("tableau",50,false));
+        salleTD.ajouter(new MonObjet("table",50,true));
+        salleTD.ajouter(new MonObjet("bic",5,true));
+        salleTD.ajouter(new MonObjet("crayon",5,true));
+        salleTD.ajouter(new MonObjet("chaisse",25,true));
+        salleTD.ajouter(new Animer("Fille",60,false));
+        salleTD.ajouter(new Animer("Prof",70,false));
 
         // burreau
-        burreau.add(new MonObjet("ordinateur",50,false));
-        burreau.add(new MonObjet("imprimante",50,false));
-        burreau.add(new MonObjet("livres",35,true));
-        burreau.add(new MonObjet("cahiers",35,true));
-        burreau.add(new MonObjet("bic",5,true));
-        burreau.add(new MonObjet("bulletin",17,true));
-        burreau.add(new MonObjet("attestation",12,true));
-        burreau.add(new Animer("directeur",80,false));
+        burreau.ajouter(new MonObjet("ordinateur",50,false));
+        burreau.ajouter(new MonObjet("imprimante",50,false));
+        burreau.ajouter(new MonObjet("livres",35,true));
+        burreau.ajouter(new MonObjet("cahiers",35,true));
+        burreau.ajouter(new MonObjet("bic",5,true));
+        burreau.ajouter(new MonObjet("bulletin",17,true));
+        burreau.ajouter(new MonObjet("attestation",12,true));
+        burreau.ajouter(new Animer("directeur",80,false));
 
         // dehors
-        dehors.add(new MonObjet("poubelle",30,true));
-        dehors.add(new MonObjet("lampadaire",15,false));
-        dehors.add(new MonObjet("craie",9,true));
+        dehors.ajouter(new MonObjet("poubelle",30,true));
+        dehors.ajouter(new MonObjet("lampadaire",15,false));
+        dehors.ajouter(new MonObjet("craie",9,true));
 
         // gymnasse
-        gymnasse.add(new MonObjet("ballon",30,true));
-        gymnasse.add(new MonObjet("chaussure",10,true));
-        gymnasse.add(new MonObjet("serviette",7,true));
-        gymnasse.add(new Animer("Monstre",80,false));
+        gymnasse.ajouter(new MonObjet("ballon",30,true));
+        gymnasse.ajouter(new MonObjet("chaussure",10,true));
+        gymnasse.ajouter(new MonObjet("serviette",7,true));
+        gymnasse.ajouter(new Animer("Monstre",80,false));
 
         // salleTP
-        salleTP.add(new MonObjet("marqueur",30,true));
-        salleTP.add(new MonObjet("ordibateur",50,false));
-        salleTP.add(new MonObjet("feuille",10,true));
-        salleTP.add(new Animer("mygale",20,false));
+        salleTP.ajouter(new MonObjet("marqueur",30,true));
+        salleTP.ajouter(new MonObjet("ordibateur",50,false));
+        salleTP.ajouter(new MonObjet("feuille",10,true));
+        salleTP.ajouter(new Animer("mygale",20,false));
 
         toutelespieces.add(dehors);
         toutelespieces.add(salleTD);
@@ -192,21 +192,21 @@ public class Jeu {
 
         } else if (motCommande.equals("plan")) {
             if (commande.aSecondMot()) {
-                System.out.println("ecrivez plan");
+                System.out.println("Ecrivez plan");
             } else {
                 commandejoueur(commande);
             }
 
         } else if (motCommande.equals("ma")) {
             if (!commande.aSecondMot()) {
-                System.out.println("ecrivez ma mission");
+                System.out.println("Ecrivez ma mission");
             } else {
                 commandejoueur(commande);
             }
 
-        } else if (motCommande.equals("deposer")) {
+        } else if (motCommande.equals("déposer")) {
             if (!commande.aSecondMot()) {
-                System.out.println("deposer quelle objets?");
+                System.out.println("déposer quelle objets?");
             } else {
                 commandejoueur(commande);
             }
@@ -304,12 +304,12 @@ public class Jeu {
         String direction = animer.deplacerAleatoire().getSecondMot();
         Piece pieceSuivante = pieceCourante.pieceSuivante(direction);
         if (pieceSuivante != null) {
-            pieceCourante.remove(animer);
-            pieceSuivante.add(animer);
+            pieceCourante.supprimer(animer);
+            pieceSuivante.ajouter(animer);
         }
     }
     /**
-     * execute les commande ma, mes, transporter et deposer.
+     * execute les commande ma, mes, transporter et déposer.
      * @param commande est une commande ࡥxecuter dont le second mot spꤩfie objets ou informations si la commande est mes
      */
     public void commandejoueur(Commande commande) {
@@ -320,24 +320,28 @@ public class Jeu {
             if(commande.getSecondMot().equalsIgnoreCase("informations"))
                 joueur.informations();
         } else if(motCommande.equals("transporter")) {
-            MonObjet ob = pieceCourante.rechercher(commande.getSecondMot());
-            if( ob != null) {
-                if (joueur.transporter(ob)) {
-                    pieceCourante.supprimer(ob);
-                    System.out.println("L'objet : " + ob.getNom() + " a été emporté avec succes ");
-                    pieceCourante.afficher();
-                }
+            if (!pieceCourante.isTransportable(commande.getSecondMot())) {
+                System.out.println("Cet objet n'est pas transportable");
             } else {
-                System.out.println("Cet objet n'existe pas dans la pièce");
+                MonObjet ob = pieceCourante.rechercher(commande.getSecondMot());
+                if (ob != null) {
+                    if (joueur.transporter(ob)) {
+                        pieceCourante.supprimer(ob);
+                        System.out.println("L'objet : " + ob.getNom() + " a été emporté avec succès ");
+                        pieceCourante.afficher();
+                    }
+                } else {
+                    System.out.println("Cet objet n'existe pas dans la pièce");
+                }
             }
 
-        } else if(motCommande.equals("deposer")) {
+        } else if(motCommande.equals("déposer")) {
             String nomObjet = commande.getSecondMot();
             MonObjet ob = joueur.rechercher(nomObjet);
             if( ob != null) {
                 joueur.deposer(ob);
-                pieceCourante.add(ob);
-                System.out.println("vous avez deposé l'objet " + nomObjet + " dans la pièce" + pieceCourante.descriptionCourte());
+                pieceCourante.ajouter(ob);
+                System.out.println("vous avez déposé l'objet " + nomObjet + " dans la pièce" + pieceCourante.descriptionCourte());
                 pieceCourante.afficher();
             } else {
                 System.out.println("Vous ne possedez pas cet objet");

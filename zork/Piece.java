@@ -51,7 +51,7 @@ public class Piece extends Stockage<Data>{
 
     public void afficher() {
         System.out.println("******************************************************************************");
-        System.out.println("  Il y'a "+ this.getTotal() +" objets dans la pièces "+ descriptionCourte()+" :");
+        System.out.println("  Il y'a "+ this.getTotal() +" objets dans la pièce "+ descriptionCourte()+" :");
         System.out.println("*******************************************************************************");
         if (!this.isEmpty()) {
             Iterator it = this.iterator();
